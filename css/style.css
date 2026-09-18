@@ -1,0 +1,389 @@
+:root {
+  --crema: #f5f1e4;
+  --verde: #1e4620;
+  --azul-oscuro: #1b3a6b;
+  --granate: #a0134f;
+  --dorado: #d1a938;
+  --blanco: #ffffff;
+  --gris-oscuro: #222222;
+  --texto: #1b1b1b;
+  --panel-shadow: rgba(31, 40, 53, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--crema);
+  color: var(--texto);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ a {
+  text-decoration: none;
+}
+
+.page-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.seal-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.seal {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--blanco);
+  box-shadow: 0 14px 30px rgba(17, 17, 17, 0.08);
+}
+
+h1,
+h2,
+h3,
+.btn,
+.nav-cards a {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  color: var(--verde);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 16px auto 8px;
+  font-size: 1.05rem;
+  color: var(--gris-oscuro);
+  max-width: 780px;
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.9rem 2.3rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.nav-cards a:hover,
+.pdf-thumb:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--verde);
+  color: var(--blanco);
+  box-shadow: 0 10px 18px rgba(30, 70, 32, 0.2);
+}
+
+.nav-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  padding: 18px 16px;
+  border: 2px solid var(--dorado);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 24px rgba(116, 95, 20, 0.08);
+}
+
+.nav-cards a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 0.9rem 1.2rem;
+  background: var(--blanco);
+  color: var(--verde);
+  border: 1.5px solid rgba(209, 169, 56, 0.7);
+  border-radius: 14px;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+.content {
+  margin-top: 32px;
+}
+
+.panel,
+.cobit-panel {
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid var(--dorado);
+  border-radius: 22px;
+  box-shadow: 0 12px 24px var(--panel-shadow);
+  padding: 24px 22px;
+  margin-bottom: 26px;
+}
+
+.panel h2,
+.cobit-header h2 {
+  margin: 0 0 14px;
+  color: var(--verde);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+}
+
+.intro-panel p,
+.info-panel p,
+.cobit-copy p,
+.cobit-copy li,
+.video-copy p,
+.pdf-preview p {
+  font-size: 1.02rem;
+  color: var(--texto);
+}
+
+.cobit-panel {
+  background: var(--azul-oscuro);
+  border-color: var(--dorado);
+  color: var(--blanco);
+  padding: 0;
+  overflow: hidden;
+}
+
+.cobit-header {
+  background: linear-gradient(180deg, #1d437d 0%, var(--azul-oscuro) 100%);
+  padding: 26px 22px 18px;
+  text-align: center;
+}
+
+.cobit-header h2 {
+  color: var(--granate);
+  margin-bottom: 6px;
+  font-size: clamp(2.1rem, 3vw, 3rem);
+}
+
+.cobit-subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cobit-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 24px 22px 28px;
+}
+
+.cobit-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blanco);
+  border-radius: 18px;
+  padding: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  width: min(100%, 860px);
+  margin: 0 auto;
+}
+
+.cobit-logo-box img {
+  width: min(100%, 760px);
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+  display: block;
+}
+
+.cobit-copy {
+  color: var(--blanco);
+}
+
+.cobit-copy p,
+.cobit-copy li,
+.cobit-copy ul {
+  color: var(--blanco);
+}
+
+.cobit-copy h3 {
+  margin: 18px 0 10px;
+  color: var(--granate);
+  font-size: 2rem;
+}
+
+.cobit-copy ul {
+  margin: 12px 0 18px 20px;
+  padding: 0;
+}
+
+.cobit-copy li {
+  margin-bottom: 8px;
+}
+
+.media-panel h2 {
+  margin-bottom: 18px;
+}
+
+.video-card {
+  display: grid;
+  gap: 18px;
+}
+
+.video-copy h3 {
+  margin: 0 0 8px;
+  color: var(--verde);
+  font-size: clamp(1.8rem, 2vw, 2.3rem);
+}
+
+.video-frame {
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: 18px;
+  background: #d9d9d9;
+}
+
+.docs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.pdf-viewer {
+  display: grid;
+  grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.pdf-sidebar {
+  display: grid;
+  gap: 12px;
+}
+
+.pdf-thumb {
+  width: 100%;
+  border: 1px solid rgba(209, 169, 56, 0.9);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 14px 12px;
+  text-align: left;
+  cursor: pointer;
+  color: var(--verde);
+  font-weight: 700;
+  font-family: "Inter", Arial, sans-serif;
+  transition: all 0.2s ease;
+}
+
+.pdf-thumb.active {
+  background: rgba(30, 70, 32, 0.08);
+  border-color: var(--verde);
+  box-shadow: 0 8px 18px rgba(30, 70, 32, 0.08);
+}
+
+.pdf-preview-panel {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(209, 169, 56, 0.8);
+  background: #f9f9f8;
+}
+
+.preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(209, 169, 56, 0.8);
+}
+
+.preview-toolbar span {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  background: var(--verde);
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.pdf-frame {
+  width: 100%;
+  min-height: 640px;
+  border: 0;
+  background: #dfe4ea;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .nav-cards {
+    gap: 12px;
+  }
+
+  .nav-cards a {
+    width: 100%;
+  }
+
+  .cobit-body,
+  .docs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
